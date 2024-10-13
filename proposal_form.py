@@ -54,11 +54,11 @@ with st.form("proposal_form"):
                 "submission_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
 
-            # Save the proposal
+            # guardar propuesta
             save_proposal(proposal_data, filename='proposals.csv')
 
 
-            # Show success message
+            # muestra mensaje de exito
             st.success("Your proposal has been successfully submitted for review.")
 
             # Clear the form
@@ -69,7 +69,7 @@ with st.form("proposal_form"):
 # Mostrar propuestas existentes
 if st.checkbox("Show existing proposals"):
     try:
-        proposals_df = pd.read_csv('proposals_test.csv')
+        proposals_df = pd.read_csv('proposals.csv')
         st.dataframe(proposals_df)
     except FileNotFoundError:
-        st.info("No proposals submitted yet.") 
+        st.info("No proposals submitted yet.")
