@@ -12,7 +12,7 @@ def save_proposal(data, filename='proposals.csv'):
 st.set_page_config(page_title="The Haberdashery Working Proposal", layout="centered")
 
 # Mostrar imagen
-st.image("haber.png", caption="The Haberdashery", use_column_width=80 )
+st.image("./img/frame1.png", caption="The Haberdashery", use_column_width=800) 
 st.title("The Haberdashery Working Proposal")
 st.write("Propose new ideas for operations, treasury management, initiatives, and more.")
 
